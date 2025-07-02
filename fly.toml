@@ -1,0 +1,14 @@
+app = "ghost"  # change this to a unique name
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[build]
+  image = "ghost:latest"
+
+[env]
+  url = "https://your-app-name.fly.dev"
+
+[mounts]
+  source = "ghost_data"
+  destination = "/var/lib/ghost/content"
