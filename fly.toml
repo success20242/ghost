@@ -1,5 +1,4 @@
-app = "trendifytube-blog"  # Your Fly app name
-region = "cdg"
+app = "trendifytube-blog"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
