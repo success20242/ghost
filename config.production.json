@@ -1,17 +1,17 @@
 {
-  "url": "http://localhost:10000",
+  "url": "https://trendifytube-blog.fly.dev",
   "server": {
-    "port": 10000,
+    "port": 2368,
     "host": "0.0.0.0"
   },
   "database": {
-    "client": "mysql",
+    "client": "pg",
     "connection": {
-      "host": "mysql-db",
-      "port": 3306,
-      "user": "admin",
-      "password": "DATABASE_PASSWORD",
-      "database": "DATABASE_NAME"
+      "host": "trendifytube-db.internal",
+      "port": 5432,
+      "user": "postgres",
+      "password": "mufEHJXX94rAeVd",
+      "database": "postgres"
     }
   },
   "mail": {
