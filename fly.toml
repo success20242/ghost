@@ -12,3 +12,6 @@ kill_timeout = 5
 [mounts]
   source = "ghost_data"
   destination = "/var/lib/ghost/content"
+
+[deploy]
+  primary_region = "cdg"
