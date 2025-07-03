@@ -3,9 +3,6 @@ app = "trendifytube-blog"
 kill_signal = "SIGINT"
 kill_timeout = 5
 
-[build]
-  image = "ghost:latest"
-
 [env]
   url = "https://trendifytube-blog.fly.dev"
   database__client = "pg"
