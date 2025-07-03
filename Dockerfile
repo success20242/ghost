@@ -7,17 +7,16 @@ USER root
 # Install the PostgreSQL driver
 RUN npm install pg
 
-WORKDIR $GHOST_INSTALL
-
-# Copy your custom files into the container
+# Copy custom files early so we can fix permissions
+WORKDIR /var/lib/ghost
 COPY . .
 
-# Fix ownership of Ghost content and config files to the 'node' user (usually uid 1000)
-RUN chown -R node:node $GHOST_INSTALL /var/lib/ghost/content /var/lib/ghost/config.production.json
+# Fix permissions to allow Ghost user to access config
+RUN chown -R node:node /var/lib/ghost
 
-# Switch back to Ghost default user (node)
+# Switch back to Ghost default user
 USER node
 
-# Clear entrypoint to avoid conflicts and start Ghost
+# Start Ghost normally
 ENTRYPOINT []
-CMD ["./start.sh"]
+CMD ["node", "current/index.js"]
