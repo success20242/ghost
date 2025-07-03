@@ -8,6 +8,12 @@ kill_timeout = 5
 
 [env]
   url = "https://trendifytube-blog.fly.dev"
+  database__client = "pg"
+  database__connection__host = "trendifytube-db.internal"
+  database__connection__user = "postgres"
+  database__connection__password = "mufEHJXX94rAeVd"
+  database__connection__database = "postgres"
+  database__connection__port = "5432"
 
 [mounts]
   source = "ghost_data"
