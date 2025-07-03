@@ -1,4 +1,4 @@
-FROM ghFROM ghost:5.128.1
+FROM ghost:5.128.1
 
 # Become root to install packages
 USER root
@@ -19,16 +19,3 @@ USER node
 WORKDIR /var/lib/ghost
 
 # Use default CMD and ENTRYPOINT from base Ghost image
-ost:5.128.1
-
-USER root
-
-WORKDIR /var/lib/ghost
-
-COPY . .
-
-RUN chown -R node:node /var/lib/ghost
-
-USER node
-
-# No CMD override: use Ghost's default entrypoint
