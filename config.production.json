@@ -11,7 +11,10 @@
       "port": 5432,
       "user": "postgres",
       "password": "mufEHJXX94rAeVd",
-      "database": "postgres"
+      "database": "postgres",
+      "ssl": {
+        "rejectUnauthorized": false
+      }
     }
   },
   "mail": {
