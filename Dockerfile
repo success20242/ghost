@@ -4,10 +4,10 @@ USER root
 
 WORKDIR /var/lib/ghost
 
-# Install the 'pg' Postgres driver in the correct place for Ghost
+# Install Postgres driver before copying anything else
 RUN npm install pg
 
-# Copy only your themes and content (NOT package.json, NOT node_modules, NOT config.production.json)
+# Only copy content (themes, images etc), NOT config.production.json, NOT package.json, NOT node_modules!
 COPY content ./content
 
 # Fix permissions
