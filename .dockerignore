@@ -1,3 +1,7 @@
+node_modules
+config.production.json
+package.json
 Dockerfile
-LICENSE
-README.md
+.git
+.gitignore
+*.md
